@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1_2</title>
+</head>
+<body>
+<script>
+    const number=prompt('nhap so:');
+    const str=number.toString();
+    const newnumber=[str[0]];
+    for(let i=0;i<str.length;i++){
+        if((str[i-1]%2==0)&(str[i]%2==0)){
+            newnumber.push('-',str[i]);
+        }else {
+            newnumber.push(str[i]);
+        }
+    }
+    document.write(newnumber.join(""));
+
+</script>
+</body>
+</html>
