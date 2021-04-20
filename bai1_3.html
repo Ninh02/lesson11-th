@@ -5,7 +5,21 @@
     <title>bai1_3</title>
 </head>
 <body>
-
-
+<script>
+    const str=prompt('nhap chuoi');
+    let UPPER='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER='abcdefghiklmnopqrstuvwxyz';
+    const result=[];
+    for(let i=0;i<str.length;i++){
+        if(UPPER.includes(str[i])){
+            result.push(str[i].toLocaleLowerCase());
+        }else if(LOWER.includes(str[i])){
+            result.push(str[i].toLocaleUpperCase());
+        }else {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
 </body>
 </html>

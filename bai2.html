@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<input type="text" value="" id="tienganh"/>
+<button onclick="translest()">click</button>
+<br>
+<input type="text" value="" id="tiengviet">
+<script>
+    let english = ["air", "around", "away", "back", "find", "give", "great"];
+    let vietnamese = ["không khí", "xung quanh", "xa cách", "đằng sau", "tìm ra", "cho", "to lớn"];
+        function translest() {
+            let str = document.getElementById("tienganh").value;
+            let index = -1;
+            for (let i = 0; i < english.length; i++) {
+                if (english[i] === str) {
+                    index = i;
+                }
+            }
+            if (index != -1) {
+                document.getElementById("tiengviet").value = vietnamese[index];
+            }else{
+                alert('khong tim thay');
+            }
+        }
+
+</script>
+
+</body>
+</html>

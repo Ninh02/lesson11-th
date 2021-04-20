@@ -8,7 +8,7 @@
 <script>
     const number=prompt('nhap so:');
     const str=number.toString();
-    const newnumber=[str[0]];
+    const newnumber=[str[""]];
     for(let i=0;i<str.length;i++){
         if((str[i-1]%2==0)&(str[i]%2==0)){
             newnumber.push('-',str[i]);

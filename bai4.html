@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type anthing slowly</title>
+</head>
+<body>
+<div style="text-align: center">
+<h1>TYPE ANTHING SLOWLY</h1>
+    <input style="height: 100px"  id="game" type="text" onkeydown="trochoi()">
+</div>
+    <script>
+        let a=[];
+        let n="";
+        a[0]="l";a[1]="a",a[2]="n";a[3]="g",a[4]="u",a[5]="a",a[6]="g",a[7]="e";
+        function trochoi() {
+            b = document.getElementById("game").value;
+            if (b.length > 0) {
+                for (let i = 0; i < b.length; i++) {
+                    n+=a[i];
+                }
+            } else {
+                document.getElementById("game").value = "";
+                n="";
+            }
+            document.getElementById("game").value = n;
+            n="";
+        }
+    </script>
+</div>
+</body>
+</html>

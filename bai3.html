@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<h1>CARO GAME</h1>
+<p id="caro"></p>
+<button id="click1" value="button1" onclick="nhan1()">button1</button>
+<button id="click2" value="button2" onclick="nhan2()">button2</button>
+<script>
+    let a=document.getElementById("caro");
+
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 3; i++) {
+        board[i] = new Array('.','.','.');
+    }
+        for (let i=0;i<3;i++){
+            data+="<br/>";
+            for (let j=0;j<3;j++){
+                data+=board[i][j]+"&nbsp";
+            }
+        }
+        // data+="<br/><br/><input id='click1' value='button1'>";
+         a.innerHTML=data;
+    function nhan1(){
+        let toadox=prompt("x:");
+        let toadoy=prompt("y:");
+        let data="";
+        board[toadox][toadoy]="X";
+        for(let i=0;i<3;i++){
+            data+="<br>";
+            for(let j=0;j<3;j++){
+                data+=board[i][j]+"&nbsp";
+            }
+        }
+        // data+="<br><br><button id='click1' value='button1' onclick='nhan1()'></button>";
+        a.innerHTML="<hr/>"+data;
+    }
+    function nhan2(){
+        let toadox=prompt("x:");
+        let toadoy=prompt("y:");
+        let data="";
+        board[toadox][toadoy]="O";
+    for(let i=0;i<3;i++){
+        data+="<br>";
+        for(let j=0;j<3;j++){
+            data+=board[i][j]+"&nbsp";
+        }
+    }
+    // data+="<br><br><button id='click2' value='button2' onclick='nhan2()'></button>";
+    a.innerHTML="<hr/>"+data;
+    }
+    if("board[0][0]==='X' && board[0][1] ='X' && board[0][2] ='X'"
+    ||"board[0][0] =='X' && board[1][1] ='X' && board[2][2] ='X'"
+    ||"board[0][0] =='X' && board[1][0] ='X' && board[2][0] ='X'"){
+        alert('Nguoi choi 1 thang');
+    }else if("board[0][0]=='O' && board[0][1] ='O' && board[0][2] ='O'"
+        ||"board[0][0] =='O' && board[1][1] ='O' && board[2][2] ='O'"
+        ||"board[0][0] =='O' && board[1][0] ='O' && board[2][0] ='O'"){
+        alert('Nguoi choi 2 thang');
+    }
+
+</script>
+
+</body>
+</html>
